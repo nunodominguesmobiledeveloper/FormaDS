@@ -7,6 +7,41 @@
 
 import SwiftUI
 
+enum DSBarChartScale {
+    static func maximumValue(for items: [DSBarChartItem]) -> Double {
+        max(
+            items.lazy
+                .map(\.value)
+                .filter { $0.isFinite && $0 > 0 }
+                .max() ?? 0,
+            1
+        )
+    }
+
+    static func barHeight(
+        value: Double,
+        maximumValue: Double,
+        plotHeight: CGFloat = DS.Sizes.Charts.weeklyPlotHeight,
+        minimumBarHeight: CGFloat = DS.Sizes.Charts.minimumBarHeight
+    ) -> CGFloat {
+        guard
+            value.isFinite,
+            maximumValue.isFinite,
+            value > 0,
+            maximumValue > 0
+        else {
+            return 0
+        }
+
+        let proportion = min(value / maximumValue, 1)
+
+        return max(
+            minimumBarHeight,
+            CGFloat(proportion) * plotHeight
+        )
+    }
+}
+
 // MARK: - Design System Bar Chart
 
 public struct DSBarChart: View {
@@ -32,7 +67,7 @@ public struct DSBarChart: View {
     // MARK: - Maximum Value
 
     private var maximumValue: Double {
-        max(items.map(\.value).max() ?? 0, 1)
+        DSBarChartScale.maximumValue(for: items)
     }
 
     // MARK: - Body
@@ -101,16 +136,9 @@ public struct DSBarChart: View {
     private func height(
         for item: DSBarChartItem
     ) -> CGFloat {
-        guard item.value > 0 else {
-            return 0
-        }
-
-        let proportion = item.value / maximumValue
-
-        return max(
-            DS.Sizes.Charts.minimumBarHeight,
-            CGFloat(proportion) *
-                DS.Sizes.Charts.weeklyPlotHeight
+        DSBarChartScale.barHeight(
+            value: item.value,
+            maximumValue: maximumValue
         )
     }
 

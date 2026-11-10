@@ -117,6 +117,38 @@ final class AdvancedThemingTests: XCTestCase {
         }
     }
 
+    func testBuiltInThemeValuesAreFiniteAndWithinTheirContracts() {
+        for theme in builtInThemes {
+            for appearance in appearances {
+                for token in DSColorToken.allCases {
+                    let color = theme.value(for: token, appearance: appearance)
+
+                    for component in [color.red, color.green, color.blue, color.alpha] {
+                        XCTAssertTrue(
+                            component.isFinite && (0...1).contains(component),
+                            "Invalid color component for \(theme.id) \(appearance) \(token.rawValue)"
+                        )
+                    }
+                }
+
+                for token in DSGradientToken.allCases {
+                    let gradient = theme.gradient(for: token, appearance: appearance)
+                    XCTAssertTrue(
+                        gradient.angleDegrees.isFinite,
+                        "Invalid gradient angle for \(theme.id) \(appearance) \(token.rawValue)"
+                    )
+                }
+
+                for token in DSShadowToken.allCases {
+                    let shadow = theme.shadow(for: token, appearance: appearance)
+                    XCTAssertTrue(shadow.radius.isFinite && shadow.radius >= 0)
+                    XCTAssertTrue(shadow.x.isFinite)
+                    XCTAssertTrue(shadow.y.isFinite)
+                }
+            }
+        }
+    }
+
     private func assertEveryColorResolves(
         in theme: DSTheme
     ) {
