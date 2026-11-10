@@ -3,30 +3,40 @@
 
 import PackageDescription
 
+// MARK: - Package
+
 let package = Package(
     name: "FormaDS",
+    defaultLocalization: "en",
+
+    // MARK: - Platforms
+
+    platforms: [
+        .iOS(.v17)
+    ],
+
+    // MARK: - Products
+
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "FormaDS",
             targets: ["FormaDS"]
-        ),
+        )
     ],
+
+    // MARK: - Targets
+
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "FormaDS",
-            swiftSettings: [
-                .enableUpcomingFeature("ApproachableConcurrency"),
-            ],
+            resources: [
+                .process("Resources")
+            ]
         ),
+
         .testTarget(
             name: "FormaDSTests",
-            dependencies: ["FormaDS"],
-            swiftSettings: [
-                .enableUpcomingFeature("ApproachableConcurrency"),
-            ],
-        ),
+            dependencies: ["FormaDS"]
+        )
     ]
 )
