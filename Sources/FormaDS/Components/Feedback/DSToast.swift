@@ -135,8 +135,8 @@ public struct DSToast: View {
                 DSIcon(.close)
                     .foregroundStyle(DS.Colors.textSecondary)
                     .frame(
-                        width: 44,
-                        height: 44
+                        width: DS.Sizes.IconButton.side,
+                        height: DS.Sizes.IconButton.side
                     )
                     .contentShape(Rectangle())
             }
@@ -171,7 +171,7 @@ public struct DSToast: View {
             )
             .strokeBorder(
                 DS.Colors.borderCard,
-                lineWidth: 1
+                lineWidth: DS.Sizes.Card.borderWidth
             )
         }
         .accessibilityElement(children: .contain)

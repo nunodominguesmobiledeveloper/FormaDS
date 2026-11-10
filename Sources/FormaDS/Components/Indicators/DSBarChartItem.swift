@@ -9,6 +9,10 @@ import Foundation
 
 // MARK: - Bar Chart Item
 
+/// A chart entry whose identity and equality are defined exclusively by `id`.
+///
+/// Labels, values, and highlighting may change without replacing the
+/// corresponding chart element in SwiftUI.
 public struct DSBarChartItem:
     Identifiable,
     Hashable,

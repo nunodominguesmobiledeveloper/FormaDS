@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 // MARK: - Design System Background
 
 public struct DSBackground: View {

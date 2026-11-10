@@ -5,13 +5,6 @@
 //  Created by Nuno Santos Domingues on 28/10/2026.
 //
 
-//
-//  DSChip.swift
-//  FormaDS
-//
-//  Created by Nuno Santos Domingues on 28/10/2026.
-//
-
 import SwiftUI
 
 // MARK: - Design System Chip

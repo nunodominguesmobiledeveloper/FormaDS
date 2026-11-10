@@ -94,6 +94,20 @@ final class SelectionComponentsTests: XCTestCase {
         XCTAssertEqual(option.title, "Semana")
     }
 
+    func testSelectionOptionEqualityUsesValueOnly() {
+        let original = DSSelectionOption(
+            value: "week",
+            title: "Semana"
+        )
+        let renamed = DSSelectionOption(
+            value: "week",
+            title: "Week"
+        )
+
+        XCTAssertEqual(original, renamed)
+        XCTAssertEqual(Set([original, renamed]).count, 1)
+    }
+
     func testSelectionOptionsSupportEnums() {
         enum Period: Hashable, Sendable {
             case day

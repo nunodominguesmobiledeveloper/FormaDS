@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/// A progress entry whose identity and equality are defined exclusively by `id`.
+///
+/// Display content and progress may change while SwiftUI preserves the identity
+/// of the corresponding view.
 public struct DSProgressItem: Identifiable, Hashable, Sendable {
     
     // MARK: - Properties
@@ -37,7 +41,7 @@ public struct DSProgressItem: Identifiable, Hashable, Sendable {
     
     // MARK: - Display Progress
     public var displayProgress: Double {
-        min(max(value, 0), 1)
+        DSProgressNormalization.normalize(value)
     }
     
     // MARK: - Percentage
@@ -53,5 +57,3 @@ public struct DSProgressItem: Identifiable, Hashable, Sendable {
         hasher.combine(id)
     }
 }
-
-

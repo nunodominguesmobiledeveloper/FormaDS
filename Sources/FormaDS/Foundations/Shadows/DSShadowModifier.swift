@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - Design System Shadow Modifier
 
-public struct DSShadowModifier: ViewModifier {
+struct DSShadowModifier: ViewModifier {
 
     // MARK: - Environment
 
@@ -18,11 +18,11 @@ public struct DSShadowModifier: ViewModifier {
 
     // MARK: - Properties
 
-    public let token: DSShadowToken
+    let token: DSShadowToken
 
     // MARK: - Initialization
 
-    public init(
+    init(
         token: DSShadowToken
     ) {
         self.token = token
@@ -30,7 +30,7 @@ public struct DSShadowModifier: ViewModifier {
 
     // MARK: - Body
 
-    public func body(
+    func body(
         content: Content
     ) -> some View {
         let shadow = theme.shadow(

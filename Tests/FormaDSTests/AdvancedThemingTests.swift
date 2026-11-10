@@ -42,6 +42,33 @@ final class AdvancedThemingTests: XCTestCase {
         )
     }
 
+    func testBuiltInThemesResolveEveryColorToken() {
+        for theme in [
+            DSTheme.aurora,
+            DSTheme.horizon,
+            DSTheme.midnightGold
+        ] {
+            assertEveryColorResolves(in: theme)
+        }
+    }
+
+    func testPaletteReportsMissingTokensInStableOrder() {
+        let values: [DSColorToken: DSColorValue] = [
+            .textPrimary: .init(hex: "#000000")
+        ]
+        let missingTokens = DSThemePalette.missingTokens(in: values)
+
+        XCTAssertFalse(missingTokens.contains(.textPrimary))
+        XCTAssertEqual(
+            missingTokens.map(\.rawValue),
+            missingTokens.map(\.rawValue).sorted()
+        )
+        XCTAssertEqual(
+            missingTokens.count,
+            DSColorToken.allCases.count - 1
+        )
+    }
+
     private func assertEveryColorResolves(
         in theme: DSTheme
     ) {

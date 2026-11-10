@@ -5,8 +5,6 @@
 //  Created by Nuno Santos Domingues on 06/11/2026.
 //
 
-import Foundation
-
 import SwiftUI
 
 // MARK: - Design System Bottom Sheet

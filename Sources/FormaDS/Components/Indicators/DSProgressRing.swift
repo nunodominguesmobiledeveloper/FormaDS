@@ -39,11 +39,7 @@ public struct DSProgressRing: View {
 
     // MARK: - Normalized Progress
     private var normalizedProgress: Double {
-        guard progress.isFinite else {
-            return 0
-        }
-        
-        return min(max(progress, 0), 1)
+        DSProgressNormalization.normalize(progress)
     }
     
     
@@ -74,7 +70,7 @@ public struct DSProgressRing: View {
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibilityTitleText)
         .accessibilityValue(
-            (progress.isFinite ? progress : 0)
+            normalizedProgress
                 .formatted(.percent.precision(.fractionLength(0)))
         )
     }

@@ -9,6 +9,10 @@ import Foundation
 
 // MARK: - Selection Option
 
+/// An option whose identity and equality are defined exclusively by `value`.
+///
+/// Titles may change without changing the identity SwiftUI uses to preserve
+/// selection and view state.
 public struct DSSelectionOption<Value: Hashable & Sendable>:
     Identifiable,
     Hashable,
