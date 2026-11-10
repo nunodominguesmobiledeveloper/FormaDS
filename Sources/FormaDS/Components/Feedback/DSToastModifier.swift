@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Toast Modifier
 
-public struct DSToastModifier: ViewModifier {
+struct DSToastModifier: ViewModifier {
 
     // MARK: - Environment
 
@@ -34,7 +34,7 @@ public struct DSToastModifier: ViewModifier {
 
     // MARK: - Initialization
 
-    public init(
+    init(
         toast: Binding<DSToastData?>,
         duration: TimeInterval = 4,
         onAction: ((DSToastData) -> Void)? = nil
@@ -57,7 +57,7 @@ public struct DSToastModifier: ViewModifier {
 
     // MARK: - Body
 
-    public func body(content: Content) -> some View {
+    func body(content: Content) -> some View {
         content
             .overlay(alignment: .top) {
                 if let currentToast = toast {

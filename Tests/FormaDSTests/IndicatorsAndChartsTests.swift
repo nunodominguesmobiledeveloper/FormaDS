@@ -12,6 +12,14 @@ import XCTest
 
 final class IndicatorsAndChartsTests: XCTestCase {
 
+    func testProgressNormalization() {
+        XCTAssertEqual(DSProgressNormalization.normalize(-0.5), 0)
+        XCTAssertEqual(DSProgressNormalization.normalize(0.5), 0.5)
+        XCTAssertEqual(DSProgressNormalization.normalize(1.5), 1)
+        XCTAssertEqual(DSProgressNormalization.normalize(.infinity), 0)
+        XCTAssertEqual(DSProgressNormalization.normalize(.nan), 0)
+    }
+
     // MARK: - Progress Normalization
 
     func testNormalProgress() {
@@ -42,6 +50,14 @@ final class IndicatorsAndChartsTests: XCTestCase {
         )
     }
 
+    func testProgressItemEqualityUsesIdentifierOnly() {
+        let original = makeProgressItem(value: 0.25)
+        let updated = makeProgressItem(value: 0.75)
+
+        XCTAssertEqual(original, updated)
+        XCTAssertEqual(Set([original, updated]).count, 1)
+    }
+
     func testNegativeProgress() {
         let item = makeProgressItem(value: -0.25)
 
@@ -53,6 +69,15 @@ final class IndicatorsAndChartsTests: XCTestCase {
         XCTAssertEqual(
             item.percentage,
             -25
+        )
+    }
+
+    func testProgressAccessibilityDescriptionUsesClampedPercentage() {
+        let item = makeProgressItem(value: 1.5)
+
+        XCTAssertEqual(
+            item.accessibilityDescription(locale: Locale(identifier: "en_US")),
+            "Tasks, Test data, 100%"
         )
     }
 
@@ -122,6 +147,23 @@ final class IndicatorsAndChartsTests: XCTestCase {
         XCTAssertEqual(item.label, "Seg")
         XCTAssertEqual(item.value, 5)
         XCTAssertTrue(item.isHighlighted)
+    }
+
+    func testChartItemEqualityUsesIdentifierOnly() {
+        let original = DSBarChartItem(
+            id: "monday",
+            label: "Monday",
+            value: 2
+        )
+        let updated = DSBarChartItem(
+            id: "monday",
+            label: "Segunda-feira",
+            value: 5,
+            isHighlighted: true
+        )
+
+        XCTAssertEqual(original, updated)
+        XCTAssertEqual(Set([original, updated]).count, 1)
     }
 
     func testWeeklyChartHeight() {

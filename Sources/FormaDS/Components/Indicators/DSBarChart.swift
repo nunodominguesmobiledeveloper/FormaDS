@@ -17,6 +17,7 @@ public struct DSBarChart: View {
     public let accessibilityTitle: String?
 
     @Environment(\.locale) private var locale
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     // MARK: - Initialization
 
@@ -78,12 +79,14 @@ public struct DSBarChart: View {
 
             Text(item.label)
                 .font(DS.Typography.caption)
+                .fontWeight(item.isHighlighted ? .semibold : .regular)
                 .foregroundStyle(
                     item.isHighlighted
                         ? DS.Colors.textPrimary
                         : DS.Colors.textSecondary
                 )
-                .lineLimit(1)
+                .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 1)
+                .fixedSize(horizontal: false, vertical: true)
         }
         .frame(
             maxWidth: .infinity,

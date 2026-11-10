@@ -5,13 +5,6 @@
 //  Created by Nuno Santos Domingues on 28/10/2026.
 //
 
-//
-//  DSChip.swift
-//  FormaDS
-//
-//  Created by Nuno Santos Domingues on 28/10/2026.
-//
-
 import SwiftUI
 
 // MARK: - Design System Chip
@@ -43,6 +36,7 @@ public struct DSChip: View {
         Button(action: action) {
             Text(title)
                 .font(DS.Typography.subtitle)
+                .fontWeight(isSelected ? .semibold : .regular)
                 .foregroundStyle(
                     isSelected
                         ? DS.Colors.textPrimary

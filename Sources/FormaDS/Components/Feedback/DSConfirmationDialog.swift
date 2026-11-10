@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - Confirmation Dialog Modifier
 
-public struct DSConfirmationDialogModifier: ViewModifier {
+struct DSConfirmationDialogModifier: ViewModifier {
 
     // MARK: - Binding
 
@@ -17,10 +17,10 @@ public struct DSConfirmationDialogModifier: ViewModifier {
 
     // MARK: - Properties
 
-    public let title: LocalizedStringResource
-    public let message: LocalizedStringResource
-    public let destructiveTitle: LocalizedStringResource
-    public let cancelTitle: LocalizedStringResource?
+    let title: LocalizedStringResource
+    let message: LocalizedStringResource
+    let destructiveTitle: LocalizedStringResource
+    let cancelTitle: LocalizedStringResource?
 
     @Environment(\.locale) private var locale
 
@@ -28,7 +28,7 @@ public struct DSConfirmationDialogModifier: ViewModifier {
 
     // MARK: - Initialization
 
-    public init(
+    init(
         isPresented: Binding<Bool>,
         title: LocalizedStringResource,
         message: LocalizedStringResource,
@@ -46,7 +46,7 @@ public struct DSConfirmationDialogModifier: ViewModifier {
 
     // MARK: - Body
 
-    public func body(content: Content) -> some View {
+    func body(content: Content) -> some View {
         content
             .confirmationDialog(
                 title,

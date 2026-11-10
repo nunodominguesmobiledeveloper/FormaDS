@@ -42,13 +42,13 @@ public extension DS {
         
         // MARK: - Chip
         public enum Chip {
-            public static let minimumHeight: CGFloat = 40
+            public static let minimumHeight: CGFloat = 44
             public static let horizontalPadding: CGFloat = 14
         }
         
         // MARK: - Segmented Control
         public enum SegmentedControl {
-            public static let minimumSegmentHeight: CGFloat = 40
+            public static let minimumSegmentHeight: CGFloat = 44
             public static let cornerRadius: CGFloat = 14
             public static let contentPadding: CGFloat = 3
             public static let selectedCornerRadius: CGFloat = 11

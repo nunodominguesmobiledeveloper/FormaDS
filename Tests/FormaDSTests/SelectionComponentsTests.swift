@@ -49,7 +49,7 @@ final class SelectionComponentsTests: XCTestCase {
     func testChipDimensions() {
         XCTAssertEqual(
             DS.Sizes.Chip.minimumHeight,
-            40
+            44
         )
 
         XCTAssertEqual(
@@ -63,7 +63,7 @@ final class SelectionComponentsTests: XCTestCase {
     func testSegmentedControlDimensions() {
         XCTAssertEqual(
             DS.Sizes.SegmentedControl.minimumSegmentHeight,
-            40
+            44
         )
 
         XCTAssertEqual(
@@ -92,6 +92,20 @@ final class SelectionComponentsTests: XCTestCase {
 
         XCTAssertEqual(option.id, "week")
         XCTAssertEqual(option.title, "Semana")
+    }
+
+    func testSelectionOptionEqualityUsesValueOnly() {
+        let original = DSSelectionOption(
+            value: "week",
+            title: "Semana"
+        )
+        let renamed = DSSelectionOption(
+            value: "week",
+            title: "Week"
+        )
+
+        XCTAssertEqual(original, renamed)
+        XCTAssertEqual(Set([original, renamed]).count, 1)
     }
 
     func testSelectionOptionsSupportEnums() {

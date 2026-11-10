@@ -9,6 +9,11 @@ import SwiftUI
 
 // MARK: - Aurora Background
 
+@available(
+    *,
+    deprecated,
+    message: "Use DSBackground().dsTheme(.aurora) instead."
+)
 public struct DSAuroraBackground: View {
 
     // MARK: - Initialization
@@ -26,13 +31,15 @@ public struct DSAuroraBackground: View {
 // MARK: - Previews
 
 #Preview("Aurora — Light") {
-    DSAuroraBackground()
+    DSBackground()
         .ignoresSafeArea()
+        .dsTheme(.aurora)
         .preferredColorScheme(.light)
 }
 
 #Preview("Aurora — Dark") {
-    DSAuroraBackground()
+    DSBackground()
         .ignoresSafeArea()
+        .dsTheme(.aurora)
         .preferredColorScheme(.dark)
 }

@@ -47,8 +47,7 @@ public struct DSStatCard: View {
                 Text(value)
                     .font(DS.Typography.displayNumber)
                     .foregroundStyle(color)
-                    .minimumScaleFactor(0.8)
-                    .lineLimit(1)
+                    .fixedSize(horizontal: false, vertical: true)
 
                 if let detail {
                     Text(detail)

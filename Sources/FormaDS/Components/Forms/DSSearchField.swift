@@ -98,6 +98,11 @@ public struct DSSearchField: View {
                         DS.Colors.textSecondary
                     )
                     .padding(DS.Spacing.xSmall)
+                    .frame(
+                        minWidth: DS.Sizes.IconButton.side,
+                        minHeight: DS.Sizes.IconButton.side
+                    )
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .accessibilityLabel(

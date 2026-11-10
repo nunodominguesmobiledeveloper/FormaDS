@@ -5,8 +5,6 @@
 //  Created by Nuno Santos Domingues on 06/11/2026.
 //
 
-import Foundation
-
 import SwiftUI
 
 // MARK: - Design System Bottom Sheet
@@ -78,7 +76,7 @@ public struct DSBottomSheet<Content: View>: View {
             Text(title)
                 .font(DS.Typography.heading)
                 .foregroundStyle(DS.Colors.textPrimary)
-                .lineLimit(2)
+                .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.center)
 
             Spacer(minLength: DS.Spacing.xxSmall)

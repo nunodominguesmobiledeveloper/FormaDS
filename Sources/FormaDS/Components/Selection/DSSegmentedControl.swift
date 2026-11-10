@@ -62,6 +62,7 @@ public struct DSSegmentedControl<
         } label: {
             Text(option.title)
                 .font(DS.Typography.subtitle)
+                .fontWeight(isSelected ? .semibold : .regular)
                 .foregroundStyle(
                     isSelected
                         ? DS.Colors.textPrimary

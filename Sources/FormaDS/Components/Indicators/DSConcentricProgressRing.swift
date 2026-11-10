@@ -15,6 +15,8 @@ public struct DSConcentricProgressRing<Center: View>: View {
 
     public let items: [DSProgressItem]
 
+    @Environment(\.locale) private var locale
+
     private let center: Center
 
     // MARK: - Initialization
@@ -53,6 +55,15 @@ public struct DSConcentricProgressRing<Center: View>: View {
             height: DS.Sizes.Indicators.ConcentricRings.side
         )
         .accessibilityElement(children: .combine)
+        .accessibilityValue(accessibilitySummary)
+    }
+
+    // MARK: - Accessibility
+
+    private var accessibilitySummary: String {
+        items
+            .map { $0.accessibilityDescription(locale: locale) }
+            .formatted(.list(type: .and).locale(locale))
     }
 
     // MARK: - Radius Resolution

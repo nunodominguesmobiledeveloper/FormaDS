@@ -117,6 +117,8 @@ public struct DSSectionHeader: View {
                     .font(DS.Typography.subtitle)
                     .foregroundStyle(DS.Colors.textLink)
                     .padding(.vertical, DS.Spacing.xSmall)
+                    .frame(minHeight: DS.Sizes.IconButton.side)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
         }
