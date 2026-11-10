@@ -49,7 +49,7 @@ final class SelectionComponentsTests: XCTestCase {
     func testChipDimensions() {
         XCTAssertEqual(
             DS.Sizes.Chip.minimumHeight,
-            40
+            44
         )
 
         XCTAssertEqual(
@@ -63,7 +63,7 @@ final class SelectionComponentsTests: XCTestCase {
     func testSegmentedControlDimensions() {
         XCTAssertEqual(
             DS.Sizes.SegmentedControl.minimumSegmentHeight,
-            40
+            44
         )
 
         XCTAssertEqual(

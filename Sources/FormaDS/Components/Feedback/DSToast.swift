@@ -71,6 +71,7 @@ public struct DSToast: View {
     // MARK: - Properties
 
     @Environment(\.locale) private var locale
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     public let data: DSToastData
     public let dismissAccessibilityLabel: LocalizedStringResource?
@@ -98,7 +99,7 @@ public struct DSToast: View {
     // MARK: - Body
 
     public var body: some View {
-        HStack(spacing: DS.Layout.itemSpacing) {
+        toastLayout {
 
             DSIcon(data.style.icon)
                 .foregroundStyle(data.style.color)
@@ -125,6 +126,8 @@ public struct DSToast: View {
                 .font(DS.Typography.subtitle)
                 .fontWeight(.semibold)
                 .foregroundStyle(DS.Colors.accentPrimary)
+                .frame(minHeight: DS.Sizes.IconButton.side)
+                .contentShape(Rectangle())
                 .buttonStyle(.plain)
                 .accessibilityHint(
                     actionAccessibilityHint ?? DSLocalizedString.toastActionHint(locale: locale)
@@ -175,6 +178,24 @@ public struct DSToast: View {
             )
         }
         .accessibilityElement(children: .contain)
+    }
+
+    private var toastLayout: AnyLayout {
+        if dynamicTypeSize.isAccessibilitySize {
+            AnyLayout(
+                VStackLayout(
+                    alignment: .leading,
+                    spacing: DS.Layout.itemSpacing
+                )
+            )
+        } else {
+            AnyLayout(
+                HStackLayout(
+                    alignment: .center,
+                    spacing: DS.Layout.itemSpacing
+                )
+            )
+        }
     }
 }
 

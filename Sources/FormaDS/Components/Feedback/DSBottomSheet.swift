@@ -76,7 +76,7 @@ public struct DSBottomSheet<Content: View>: View {
             Text(title)
                 .font(DS.Typography.heading)
                 .foregroundStyle(DS.Colors.textPrimary)
-                .lineLimit(2)
+                .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.center)
 
             Spacer(minLength: DS.Spacing.xxSmall)

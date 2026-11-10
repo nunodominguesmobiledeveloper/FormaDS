@@ -60,12 +60,12 @@ final class FoundationMetricsTests: XCTestCase {
     func testSelectionDimensions() {
         XCTAssertEqual(
             DS.Sizes.Chip.minimumHeight,
-            40
+            44
         )
 
         XCTAssertEqual(
             DS.Sizes.SegmentedControl.minimumSegmentHeight,
-            40
+            44
         )
     }
 

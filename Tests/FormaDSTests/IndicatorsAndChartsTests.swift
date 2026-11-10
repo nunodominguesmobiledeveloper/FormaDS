@@ -72,6 +72,15 @@ final class IndicatorsAndChartsTests: XCTestCase {
         )
     }
 
+    func testProgressAccessibilityDescriptionUsesClampedPercentage() {
+        let item = makeProgressItem(value: 1.5)
+
+        XCTAssertEqual(
+            item.accessibilityDescription(locale: Locale(identifier: "en_US")),
+            "Tasks, Test data, 100%"
+        )
+    }
+
     // MARK: - Concentric Ring Geometry
 
     func testConcentricRingDimensions() {

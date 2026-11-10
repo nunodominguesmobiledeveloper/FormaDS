@@ -35,7 +35,7 @@ private extension DSThemePalette {
 
             .textPrimary: .init(hex: "#112536"),
             .textSecondary: .init(hex: "#536879"),
-            .textLink: .init(hex: "#087C99"),
+            .textLink: .init(hex: "#077891"),
 
             .surfaceCard: .init(hex: "#FFFFFF", alpha: 0.84),
             .surfaceElevated: .init(hex: "#FFFFFF", alpha: 0.94),
@@ -109,7 +109,7 @@ private extension DSEffectsPalette {
     static let horizonLightEffects = DSEffectsPalette(
         primaryActionGradient: DSGradientValue(
             startColor: .init(hex: "#087C99"),
-            endColor: .init(hex: "#16B8C9"),
+            endColor: .init(hex: "#08758F"),
             angleDegrees: 120
         ),
         primaryActionShadow: DSShadowValue(

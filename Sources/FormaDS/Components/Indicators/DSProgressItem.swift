@@ -56,4 +56,18 @@ public struct DSProgressItem: Identifiable, Hashable, Sendable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
+
+    func accessibilityDescription(locale: Locale) -> String {
+        var localizedTitle = title
+        var localizedDetail = detail
+        localizedTitle.locale = locale
+        localizedDetail.locale = locale
+
+        let percentage = displayProgress.formatted(
+            .percent.precision(.fractionLength(0)).locale(locale)
+        )
+
+        return "\(String(localized: localizedTitle)), "
+            + "\(String(localized: localizedDetail)), \(percentage)"
+    }
 }

@@ -36,6 +36,7 @@ public struct DSChip: View {
         Button(action: action) {
             Text(title)
                 .font(DS.Typography.subtitle)
+                .fontWeight(isSelected ? .semibold : .regular)
                 .foregroundStyle(
                     isSelected
                         ? DS.Colors.textPrimary
