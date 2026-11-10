@@ -80,4 +80,57 @@ final class ToastTests: XCTestCase {
             .accentPrimary
         )
     }
+
+    // MARK: - Presentation Policy
+
+    func testPositiveFiniteDurationSchedulesAutomaticDismissal() {
+        XCTAssertTrue(
+            DSToastPresentationPolicy.shouldAutomaticallyDismiss(
+                duration: 4,
+                voiceOverEnabled: false
+            )
+        )
+    }
+
+    func testZeroAndInvalidDurationsDisableAutomaticDismissal() {
+        for duration in [0, -1, .infinity, .nan] {
+            XCTAssertFalse(
+                DSToastPresentationPolicy.shouldAutomaticallyDismiss(
+                    duration: duration,
+                    voiceOverEnabled: false
+                ),
+                "Unexpected dismissal for duration \(duration)"
+            )
+        }
+    }
+
+    func testVoiceOverDisablesAutomaticDismissal() {
+        XCTAssertFalse(
+            DSToastPresentationPolicy.shouldAutomaticallyDismiss(
+                duration: 4,
+                voiceOverEnabled: true
+            )
+        )
+    }
+
+    func testToastActionRequiresTitleAndHandler() {
+        XCTAssertTrue(
+            DSToastPresentationPolicy.shouldPresentAction(
+                actionTitle: "Undo",
+                hasActionHandler: true
+            )
+        )
+        XCTAssertFalse(
+            DSToastPresentationPolicy.shouldPresentAction(
+                actionTitle: nil,
+                hasActionHandler: true
+            )
+        )
+        XCTAssertFalse(
+            DSToastPresentationPolicy.shouldPresentAction(
+                actionTitle: "Undo",
+                hasActionHandler: false
+            )
+        )
+    }
 }

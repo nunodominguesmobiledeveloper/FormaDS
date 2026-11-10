@@ -13,10 +13,13 @@ import XCTest
 final class IndicatorsAndChartsTests: XCTestCase {
 
     func testProgressNormalization() {
+        XCTAssertEqual(DSProgressNormalization.normalize(0), 0)
+        XCTAssertEqual(DSProgressNormalization.normalize(1), 1)
         XCTAssertEqual(DSProgressNormalization.normalize(-0.5), 0)
         XCTAssertEqual(DSProgressNormalization.normalize(0.5), 0.5)
         XCTAssertEqual(DSProgressNormalization.normalize(1.5), 1)
         XCTAssertEqual(DSProgressNormalization.normalize(.infinity), 0)
+        XCTAssertEqual(DSProgressNormalization.normalize(-.infinity), 0)
         XCTAssertEqual(DSProgressNormalization.normalize(.nan), 0)
     }
 
@@ -188,6 +191,46 @@ final class IndicatorsAndChartsTests: XCTestCase {
         XCTAssertEqual(
             items.reduce(0) { $0 + $1.value },
             10
+        )
+    }
+
+    func testChartScaleHandlesEmptyAndSingleItemCollections() {
+        XCTAssertEqual(DSBarChartScale.maximumValue(for: []), 1)
+
+        let item = DSBarChartItem(id: "only", label: "Only", value: 42)
+        XCTAssertEqual(DSBarChartScale.maximumValue(for: [item]), 42)
+    }
+
+    func testChartScaleHandlesZeroAndLargeValues() {
+        XCTAssertEqual(
+            DSBarChartScale.barHeight(value: 0, maximumValue: 1),
+            0
+        )
+        XCTAssertEqual(
+            DSBarChartScale.barHeight(
+                value: 1_000_000,
+                maximumValue: 1_000_000
+            ),
+            DS.Sizes.Charts.weeklyPlotHeight
+        )
+        XCTAssertEqual(
+            DSBarChartScale.barHeight(value: 2, maximumValue: 1),
+            DS.Sizes.Charts.weeklyPlotHeight
+        )
+    }
+
+    func testChartScaleRejectsNonFiniteAndNegativeValues() {
+        XCTAssertEqual(DSBarChartScale.barHeight(value: -1, maximumValue: 1), 0)
+        XCTAssertEqual(DSBarChartScale.barHeight(value: .infinity, maximumValue: 1), 0)
+        XCTAssertEqual(DSBarChartScale.barHeight(value: .nan, maximumValue: 1), 0)
+        XCTAssertEqual(DSBarChartScale.barHeight(value: 1, maximumValue: .infinity), 0)
+        XCTAssertEqual(DSBarChartScale.barHeight(value: 1, maximumValue: .nan), 0)
+    }
+
+    func testChartScalePreservesMinimumVisibleBarHeight() {
+        XCTAssertEqual(
+            DSBarChartScale.barHeight(value: 0.001, maximumValue: 100),
+            DS.Sizes.Charts.minimumBarHeight
         )
     }
 

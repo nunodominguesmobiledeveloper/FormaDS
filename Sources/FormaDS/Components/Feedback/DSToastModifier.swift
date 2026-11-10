@@ -8,6 +8,22 @@
 import SwiftUI
 import UIKit
 
+enum DSToastPresentationPolicy {
+    static func shouldAutomaticallyDismiss(
+        duration: TimeInterval,
+        voiceOverEnabled: Bool
+    ) -> Bool {
+        !voiceOverEnabled && duration.isFinite && duration > 0
+    }
+
+    static func shouldPresentAction(
+        actionTitle: LocalizedStringResource?,
+        hasActionHandler: Bool
+    ) -> Bool {
+        actionTitle != nil && hasActionHandler
+    }
+}
+
 // MARK: - Toast Modifier
 
 struct DSToastModifier: ViewModifier {
@@ -66,9 +82,9 @@ struct DSToastModifier: ViewModifier {
                         onDismiss: {
                             dismiss(currentToast)
                         },
-                        onAction: (
-                            currentToast.actionTitle != nil &&
-                            onAction != nil
+                        onAction: DSToastPresentationPolicy.shouldPresentAction(
+                            actionTitle: currentToast.actionTitle,
+                            hasActionHandler: onAction != nil
                         )
                             ? {
                                 performAction(currentToast)
@@ -116,12 +132,10 @@ struct DSToastModifier: ViewModifier {
 
         // Keep the toast visible while
         // VoiceOver is enabled.
-        guard !voiceOverEnabled else {
-            return
-        }
-
-        // Duration 0 disables automatic dismissal.
-        guard duration > 0, duration.isFinite else {
+        guard DSToastPresentationPolicy.shouldAutomaticallyDismiss(
+            duration: duration,
+            voiceOverEnabled: voiceOverEnabled
+        ) else {
             return
         }
 

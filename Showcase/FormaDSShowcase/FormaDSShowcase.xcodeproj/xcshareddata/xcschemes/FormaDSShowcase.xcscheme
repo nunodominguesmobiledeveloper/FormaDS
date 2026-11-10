@@ -17,6 +17,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "78310C9E308E7A8D00A50834"
                BuildableName = "FormaDSShowcase.app"
+               BlueprintName = "FormaDSShowcase"
                ReferencedContainer = "container:FormaDSShowcase.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,6 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "78310C9E308E7A8D00A50834"
             BuildableName = "FormaDSShowcase.app"
+            BlueprintName = "FormaDSShowcase"
             ReferencedContainer = "container:FormaDSShowcase.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,6 +64,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "78310C9E308E7A8D00A50834"
             BuildableName = "FormaDSShowcase.app"
+            BlueprintName = "FormaDSShowcase"
             ReferencedContainer = "container:FormaDSShowcase.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

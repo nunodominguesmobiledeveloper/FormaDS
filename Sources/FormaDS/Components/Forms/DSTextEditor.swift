@@ -62,11 +62,7 @@ public struct DSTextEditor: View {
     // MARK: - Validation State
 
     private var fieldState: DSFormFieldState {
-        guard let errorMessage else {
-            return .normal
-        }
-
-        return .error
+        errorMessage == nil ? .normal : .error
     }
 
     // MARK: - Body
