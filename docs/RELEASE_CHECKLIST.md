@@ -16,7 +16,7 @@
 
 - [x] Documentation pull request reviewed and merged.
 - [ ] CI succeeds on the release-candidate commit.
-- [ ] Independent consumer validation in `CONSUMER_INTEGRATION.md` succeeds.
+- [x] Independent consumer validation in `CONSUMER_INTEGRATION.md` succeeds.
 - [ ] Showcase UI-test decision recorded; current target is absent.
 - [ ] Manual VoiceOver, maximum Dynamic Type, Reduce Motion and touch-target review signed off.
 - [ ] Visual-regression strategy approved or manual baseline evidence retained.
@@ -34,6 +34,6 @@
 - Tested device/simulator: physical device during Phase 14.5 and iOS simulator for package tests; record exact candidate matrix
 - Package tests: 117 passed on 11 November 2026 (Phase 14.6 branch); rerun on candidate
 - CI: workflow hardened for Xcode 27 patch/runtime updates; release-candidate run pending
-- Independent consumer: pending Phase 14.7
+- Independent consumer: Phase 14.7 passed on iPhone 18 Pro simulator with iOS 27.0
 - Accessibility sign-off: pending final manual review
 - Release approval: pending

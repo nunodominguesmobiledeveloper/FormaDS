@@ -21,6 +21,9 @@ Release status: **not approved and not released**
 - No obvious credential, private-key or provisioning-profile files are tracked.
 - No `TODO`, `FIXME`, `@unchecked Sendable` or `nonisolated(unsafe)` markers were
   found in the package source.
+- The Phase 14.7 independent consumer fixture built and ran on an iPhone 18 Pro
+  simulator with all six theme/appearance combinations, English and European
+  Portuguese localization, state changes and presentation components verified.
 
 ## Corrections made
 
@@ -36,7 +39,6 @@ Release status: **not approved and not released**
 | Priority | Item | Required action |
 |---|---|---|
 | High | No license file | Repository owner must choose and approve distribution terms. |
-| High | Independent consumer not validated | Complete the Phase 14.7 fixture and evidence in `CONSUMER_INTEGRATION.md`. |
 | High | Candidate CI result pending | Merge the readiness changes and confirm CI on the exact candidate commit. |
 | High | Release approval pending | Record the candidate SHA and obtain explicit owner approval before tagging. |
 | Medium | Manual accessibility sign-off pending | Validate VoiceOver, maximum Dynamic Type, Reduce Motion and touch targets. |
