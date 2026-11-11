@@ -16,6 +16,8 @@ has been published yet.
 - Accessibility support for VoiceOver, Dynamic Type, Reduce Motion and touch targets.
 - Automated package tests and a GitHub Actions validation workflow.
 - Public API, architecture, theming, localization, testing and integration documentation.
+- Independent consumer validation fixture covering themes, appearances, localization,
+  state changes and presentation components.
 
 ### Changed
 
