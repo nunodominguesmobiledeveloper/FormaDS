@@ -19,7 +19,26 @@ In Xcode, choose **File → Add Package Dependencies… → Add Local…**, sele
 
 ### Git dependency
 
-Use this repository URL in Xcode after an approved version tag is available. No stable release tag is documented yet, so production consumers should not assume a `1.0.0` release exists.
+In Xcode, choose **File → Add Package Dependencies…** and enter:
+
+```text
+https://github.com/nunodominguesmobiledeveloper/FormaDS.git
+```
+
+After the `1.0.0` tag is published, select **Up to Next Major Version** from `1.0.0`. No stable release tag exists yet, so production consumers should not assume that version is currently available.
+
+The equivalent package manifest entry will be:
+
+```swift
+dependencies: [
+    .package(
+        url: "https://github.com/nunodominguesmobiledeveloper/FormaDS.git",
+        from: "1.0.0"
+    )
+]
+```
+
+Add `.product(name: "FormaDS", package: "FormaDS")` to the consuming target dependencies.
 
 ## Getting started
 
@@ -93,7 +112,7 @@ FormaDS/
 
 ## Validation status
 
-During the Phase 14.5 validation completed on 11 November 2026, the package built with no warnings, all 117 package tests passed, and the Showcase built and ran on a physical device. The repository has CI for package tests and a Showcase build; a dedicated Showcase UI-test target and snapshot-test infrastructure are not currently present.
+During the MIT release-preparation validation on 11 November 2026, the package built successfully and all 117 package tests passed. Earlier repository validation also built and ran the Showcase and the independent consumer application. Candidate CI and a final clean installation check remain required before tagging `1.0.0`. The repository has CI for package tests and a Showcase build; a dedicated Showcase UI-test target and snapshot-test infrastructure are not currently present.
 
 ## Documentation
 
@@ -102,11 +121,18 @@ During the Phase 14.5 validation completed on 11 November 2026, the package buil
 - [Theming](docs/THEMING.md)
 - [Localization](docs/LOCALIZATION.md)
 - [Testing](docs/TESTING.md)
+- [Visual regression strategy](docs/VISUAL_REGRESSION.md)
 - [Consumer integration](docs/CONSUMER_INTEGRATION.md)
 - [Release checklist](docs/RELEASE_CHECKLIST.md)
 - [Release readiness audit](docs/RELEASE_READINESS.md)
+- [Licensing overview](README_LICENSING.md)
+- [Licensing policy](docs/LICENSING_POLICY.md)
+- [Third-party and asset audit](docs/ASSET_LICENSE_AUDIT.md)
+- [Publishing guidance](docs/PUBLISHING.md)
 - [Changelog](CHANGELOG.md)
 
 ## License
 
-No license file is currently present. Distribution terms require an explicit repository-owner decision before a public release.
+FormaDS is open-source software available under the [MIT License](LICENSE). The license permits personal and commercial use, modification, distribution, sublicensing and sale, provided that the copyright and permission notices are preserved.
+
+Sora and Manrope are third-party materials and remain under the SIL Open Font License 1.1 rather than MIT. See [Licensing](README_LICENSING.md), [Third-Party Notices](THIRD_PARTY_NOTICES.md) and `LICENSES/`.

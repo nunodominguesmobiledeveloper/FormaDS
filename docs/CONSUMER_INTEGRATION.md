@@ -43,6 +43,11 @@ struct ConsumerRootView: View {
 
 Validation completed on 11 November 2026.
 
+The fixture was clean-built and launched again during the MIT release-preparation
+pass after the official font replacements. No package integration or launch
+regression was reported. The detailed theme, appearance, localization and component
+matrix below remains the recorded functional evidence.
+
 - Consumer project: `Integration/FormaDSConsumerValidation/FormaDSConsumerValidation.xcodeproj`
 - Target and scheme: `FormaDSConsumerValidation`
 - Dependency: local `FormaDS` package product through the Xcode package dependency
