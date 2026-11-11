@@ -104,6 +104,8 @@ During the Phase 14.5 validation completed on 11 November 2026, the package buil
 - [Testing](docs/TESTING.md)
 - [Consumer integration](docs/CONSUMER_INTEGRATION.md)
 - [Release checklist](docs/RELEASE_CHECKLIST.md)
+- [Release readiness audit](docs/RELEASE_READINESS.md)
+- [Changelog](CHANGELOG.md)
 
 ## License
 
