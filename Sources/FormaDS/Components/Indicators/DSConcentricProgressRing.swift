@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+enum DSConcentricProgressRingLayout {
+    static let centerContentSide =
+        DS.Sizes.Indicators.ConcentricRings.innerRadius * 2
+        - DS.Sizes.Indicators.ConcentricRings.lineWidth
+}
+
 // MARK: - Concentric Progress Ring
 
 public struct DSConcentricProgressRing<Center: View>: View {
@@ -49,6 +55,10 @@ public struct DSConcentricProgressRing<Center: View>: View {
             }
 
             center
+                .frame(
+                    maxWidth: DSConcentricProgressRingLayout.centerContentSide,
+                    maxHeight: DSConcentricProgressRingLayout.centerContentSide
+                )
         }
         .frame(
             width: DS.Sizes.Indicators.ConcentricRings.side,

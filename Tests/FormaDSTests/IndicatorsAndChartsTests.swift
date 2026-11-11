@@ -127,6 +127,23 @@ final class IndicatorsAndChartsTests: XCTestCase {
         )
     }
 
+    func testConcentricRingCenterContentFitsInsideInnerRing() {
+        let rings = DS.Sizes.Indicators.ConcentricRings.self
+
+        XCTAssertEqual(
+            DSConcentricProgressRingLayout.centerContentSide,
+            rings.innerRadius * 2 - rings.lineWidth
+        )
+        XCTAssertGreaterThan(
+            DSConcentricProgressRingLayout.centerContentSide,
+            0
+        )
+        XCTAssertLessThan(
+            DSConcentricProgressRingLayout.centerContentSide,
+            rings.innerRadius * 2
+        )
+    }
+
     // MARK: - Progress Bar
 
     func testProgressBarHeight() {

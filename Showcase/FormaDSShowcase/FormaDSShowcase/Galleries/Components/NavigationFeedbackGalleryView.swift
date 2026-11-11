@@ -190,7 +190,7 @@ struct NavigationFeedbackGalleryView: View {
                 .foregroundStyle(DS.Colors.textPrimary)
 
             Text(
-                "Experimenta os componentes interativos."
+                "Try the interactive components."
             )
             .font(DS.Typography.subtitle)
             .foregroundStyle(DS.Colors.textSecondary)
@@ -205,7 +205,7 @@ struct NavigationFeedbackGalleryView: View {
                 alignment: .leading,
                 spacing: DS.Layout.itemSpacing
             ) {
-                Text("Separador selecionado")
+                Text("Selected tab")
                     .font(DS.Typography.caption)
                     .foregroundStyle(
                         DS.Colors.textSecondary
