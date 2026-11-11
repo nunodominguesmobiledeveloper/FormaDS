@@ -105,8 +105,16 @@ During the Phase 14.5 validation completed on 11 November 2026, the package buil
 - [Consumer integration](docs/CONSUMER_INTEGRATION.md)
 - [Release checklist](docs/RELEASE_CHECKLIST.md)
 - [Release readiness audit](docs/RELEASE_READINESS.md)
+- [Licensing overview](README_LICENSING.md)
+- [Licensing policy](docs/LICENSING_POLICY.md)
+- [Third-party and asset audit](docs/ASSET_LICENSE_AUDIT.md)
+- [Publishing guidance](docs/PUBLISHING.md)
 - [Changelog](CHANGELOG.md)
 
 ## License
 
-No license file is currently present. Distribution terms require an explicit repository-owner decision before a public release.
+FormaDS is proprietary software and is not open source. Personal noncommercial use is described in the draft [FormaDS Proprietary SDK License](LICENSE); commercial use requires a separate written agreement. Contact **formadesignsystem@gmail.com**.
+
+The permission to distribute an authorized application in compiled form does not permit redistribution of FormaDS as a reusable SDK, source package or fork. Sora and Manrope remain under the SIL Open Font License 1.1 and are not relicensed under the proprietary terms. See [Licensing](README_LICENSING.md), [Third-Party Notices](THIRD_PARTY_NOTICES.md) and `LICENSES/`.
+
+The proprietary license is not ready for external publication until its remaining legal placeholders and the other release-readiness items documented in the [asset audit](docs/ASSET_LICENSE_AUDIT.md) are resolved. The bundled fonts have pinned upstream provenance and remain licensed under OFL-1.1.

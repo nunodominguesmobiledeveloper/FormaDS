@@ -1,0 +1,121 @@
+FormaDS Proprietary SDK License — Draft 1.0
+Effective date: [YYYY-MM-DD]
+Copyright © 2026 Nuno Domingues. All rights reserved.
+
+IMPORTANT: DRAFT FOR LEGAL REVIEW. The placeholders must be completed and the
+terms reviewed by qualified legal counsel before external distribution.
+
+1. DEFINITIONS
+"FormaDS" or "SDK" means the original software components, source code,
+binary distributions, documentation, design tokens, themes and related original
+materials distributed by the Licensor, excluding Third-Party Materials.
+"Licensor" means Nuno Domingues, reachable for licensing matters at
+formadesignsystem@gmail.com.
+"Licensee" means the person or legal entity accepting these terms.
+"Application" means software developed by Licensee that incorporates the SDK
+as a dependency and exposes functionality beyond the SDK itself.
+"Third-Party Materials" means fonts, icons, libraries, assets and other
+materials licensed by third parties under separate terms.
+"Personal Use" means development and distribution by a natural person acting
+independently, solely for noncommercial purposes, without revenue, advertising,
+sponsorship, subscriptions, paid features, client work, paid employment-related
+use or other direct or indirect business benefit.
+"Commercial Use" means any use outside the Personal Use definition, including
+use by businesses, employers, contractors acting for clients, or monetized apps.
+
+2. OWNERSHIP AND SCOPE
+The SDK is licensed, not sold. Licensor retains all rights in the original
+FormaDS materials, except rights expressly granted below. This license grants
+no ownership or exclusivity. All rights not expressly granted are reserved.
+Rights in Third-Party Materials remain with their respective rightsholders and
+are governed by their own licenses, which prevail for those materials.
+
+3. PERSONAL LICENSE (NO FEE)
+Subject to compliance with this license, Licensor grants an individual Licensee
+a non-exclusive, non-transferable, non-sublicensable, revocable-for-breach
+license to obtain and use an authorized copy of the unmodified SDK for Personal
+Use, to incorporate the SDK as a dependency in their Applications, and to
+distribute those Applications only as compiled executable applications to end
+users. Such distribution may necessarily include compiled portions of the SDK.
+The Application may be made available free of charge, including via an app store,
+provided that it has no direct or indirect commercial purpose or monetization.
+
+4. COMMERCIAL LICENSE (SEPARATE AGREEMENT REQUIRED)
+Commercial Use is not granted by this document. A commercial Licensee must
+receive a separate written agreement signed or otherwise validly accepted
+under an authorized process specified by Licensor. That agreement defines the
+fees, licensed entities, number of applications or products, permitted users,
+distribution rights, updates, support, term and other commercial conditions.
+No payment, purchase request or inquiry by itself grants commercial rights.
+
+5. ALLOWED CONFIGURATION
+Licensee may configure and theme unmodified FormaDS components through the
+public APIs, including texts, localizations, colors, assets supplied by the
+Application, bindings, callbacks and layouts exposed for customization. Such
+configuration alone does not constitute a modification of the SDK.
+
+6. RESTRICTIONS
+Except as expressly authorized by Licensor in writing or required by
+mandatory applicable law, Licensee must not:
+(a) modify, patch, alter or create derivative distributions of the SDK code,
+    binaries or proprietary assets;
+(b) sell, sublicense, rent, publish, share or redistribute the SDK as a
+    standalone component, source package, framework, template, fork or product;
+(c) extract and repurpose substantial copyrighted code or original protected
+    assets from the SDK to create a competing or replacement library;
+(d) remove copyright, trademark or license notices;
+(e) disclose nonpublic SDK source code or distribute access credentials to
+    persons who are not independently authorized;
+(f) use FormaDS trade names or branding in a manner implying endorsement or
+    ownership of the SDK without prior written permission.
+A compiled Application may contain necessary compiled SDK portions, solely as
+permitted by Sections 3 or 4; this is not permission to redistribute a reusable
+SDK or development kit. No restriction in this license applies to independently
+created work merely because it has similar ideas or functionality.
+
+7. THIRD-PARTY MATERIALS
+Third-Party Materials are NOT relicensed under this proprietary license. The
+licensee receives whatever rights their own licenses grant, including where
+those licenses independently permit modifications or redistribution. Where the
+SDK bundles Sora or Manrope fonts, the corresponding SIL Open Font License 1.1,
+original copyright notices and reserved font names (if any) must be retained
+and passed on as required by those licenses. See THIRD_PARTY_NOTICES.md and
+LICENSES/. Apple platform APIs and symbols remain subject to Apple's terms.
+
+8. LEGALLY MANDATORY RIGHTS
+Nothing in this license is intended to exclude or restrict rights that cannot
+lawfully be waived, including permitted acts by lawful users and legally
+mandated interoperability-related acts under applicable law.
+
+9. UPDATES AND VERSIONS
+The scope of rights for an SDK release is governed by the terms applicable to
+that release when accepted, unless parties lawfully agree otherwise. Licensor
+may offer later releases under different terms or prices. This provision does
+not purport to revoke valid grants for previously received versions solely
+because a later version adopts different terms. Support and updates are not
+included unless expressly agreed.
+
+10. TERMINATION
+Licensor may terminate the license for a material breach, subject to mandatory
+law and any notice/cure requirements agreed in writing. On termination,
+Licensee must cease unlicensed use and distribution of the SDK, subject to
+mandatory rights and terms of any separate written agreement. Treatment of
+already-distributed Applications and existing end users must be specified in
+commercial agreements where relevant; this draft does not impose retroactive
+technical removal from end-user devices.
+
+11. WARRANTY AND LIABILITY
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SDK IS PROVIDED "AS IS"
+WITHOUT WARRANTIES OF ANY KIND. LIABILITY LIMITATIONS AND EXCLUSIONS APPLY ONLY
+IN SO FAR AS VALID UNDER MANDATORY CONSUMER, CIVIL AND OTHER APPLICABLE LAW.
+No term excludes liability that cannot lawfully be excluded.
+
+12. GOVERNING LAW AND DISPUTES
+[SELECT JURISDICTION, VENUE, CONSUMER/MANDATORY LAW EXCEPTIONS AND DISPUTE
+PROCESS WITH COUNSEL — DO NOT PUBLISH THIS PLACEHOLDER AS FINAL LEGAL TEXT.]
+
+13. CONTACT AND ACCEPTANCE
+Licensing contact: formadesignsystem@gmail.com
+The download, installation, or use of the SDK alone does not guarantee an
+enforceable contract in every jurisdiction. Licensor should implement an
+appropriate, evidenced acceptance procedure as part of distribution.

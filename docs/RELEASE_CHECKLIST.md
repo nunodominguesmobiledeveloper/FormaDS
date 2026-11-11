@@ -21,7 +21,8 @@
 - [ ] Manual VoiceOver, maximum Dynamic Type, Reduce Motion and touch-target review signed off.
 - [ ] Visual-regression strategy approved or manual baseline evidence retained.
 - [x] Public API inventory reviewed for source compatibility during Phases 14.2 and 14.5.
-- [ ] License/distribution terms decided; no license file currently exists.
+- [ ] Proprietary license draft reviewed and finalized; the file exists, but its effective date, governing law/venue, acceptance process and legal approval remain pending.
+- [x] Every bundled Sora/Manrope TTF replaced from a pinned official static distribution, with matching OFL notices and hashes recorded in the asset audit.
 - [x] Changelog and pre-1.0 migration status prepared.
 - [ ] Versioning policy and release repository URL confirmed.
 - [ ] Release-candidate commit SHA recorded.

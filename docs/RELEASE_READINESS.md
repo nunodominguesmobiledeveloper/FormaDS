@@ -38,7 +38,8 @@ Release status: **not approved and not released**
 
 | Priority | Item | Required action |
 |---|---|---|
-| High | No license file | Repository owner must choose and approve distribution terms. |
+| High | Proprietary license remains a draft | Set the effective date, governing law/venue and acceptance process; obtain qualified legal review. |
+| Resolved | Font binary provenance | All seven TTF files were replaced from pinned official static upstream distributions; PostScript names, notices and hashes are recorded in the asset audit. |
 | High | Candidate CI result pending | Merge the readiness changes and confirm CI on the exact candidate commit. |
 | High | Release approval pending | Record the candidate SHA and obtain explicit owner approval before tagging. |
 | Medium | Manual accessibility sign-off pending | Validate VoiceOver, maximum Dynamic Type, Reduce Motion and touch targets. |
