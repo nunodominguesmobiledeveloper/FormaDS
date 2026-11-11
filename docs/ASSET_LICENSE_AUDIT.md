@@ -4,13 +4,13 @@
 **Âmbito:** conteúdo atualmente presente no repositório FormaDS  
 **Titular indicado para os materiais originais FormaDS:** Nuno Domingues (`formadesignsystem@gmail.com`)
 
-Esta é uma auditoria técnica de inventário e proveniência, não um parecer jurídico. A titularidade de contribuições, condições laborais/contratuais e validade da licença proprietária exigem confirmação do titular e, antes de distribuição externa, revisão jurídica.
+Esta é uma auditoria técnica de inventário e proveniência, não um parecer jurídico. A titularidade de contribuições e eventuais condições laborais ou contratuais exigem confirmação factual do titular antes de distribuição externa sob MIT.
 
 ## Resultado resumido
 
 | Recurso | Evidência encontrada | Licença/termos | Estado |
 |---|---|---|---|
-| Código, tokens, temas e documentação FormaDS | Ficheiros Swift/Markdown do repositório; nenhum aviso de terceiro encontrado no source | Licença proprietária FormaDS em minuta | Titular indicado; revisão jurídica pendente |
+| Código, tokens, temas e documentação FormaDS | Ficheiros Swift/Markdown do repositório; nenhum aviso de terceiro encontrado no source | MIT | Titular indicado; confirmação factual de titularidade pendente |
 | Sora (3 TTF) | TTF estáticos do upstream oficial fixado por commit; hashes e nomes PostScript verificados | OFL-1.1 | Proveniência e licença confirmadas |
 | Manrope (4 TTF) | TTF estáticos do upstream oficial fixado por commit; hashes e nomes PostScript verificados | OFL-1.1 | Proveniência e licença confirmadas |
 | SF Symbols | Nomes referenciados via APIs SwiftUI; nenhum símbolo exportado | Termos Apple | Sem payload redistribuído encontrado |
@@ -78,7 +78,6 @@ As referências funcionais permanecem inalteradas: `DSFontRegistry` regista os s
 ## Bloqueios antes de publicação externa
 
 1. Confirmar por declaração do titular que o código, temas, documentação, screenshots e exemplos originais podem ser licenciados por Nuno Domingues e não incorporam material de empregador/cliente ou código copiado sem aviso.
-2. Obter revisão jurídica da licença proprietária, definir data efetiva, lei aplicável, foro e mecanismo de aceitação.
-3. Confirmar disponibilidade e política da designação/marca `FormaDS`; esta auditoria não efetuou pesquisa de marca.
+2. Confirmar disponibilidade e política da designação/marca `FormaDS`; esta auditoria não efetuou pesquisa de marca.
 
-Enquanto estes pontos não forem resolvidos, os documentos devem permanecer em estado de minuta e o repositório não deve ser apresentado como pronto para distribuição pública.
+Enquanto estes pontos não forem resolvidos, o repositório não deve ser apresentado como pronto para distribuição pública.

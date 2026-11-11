@@ -1,26 +1,30 @@
 # Política de licenciamento — FormaDS
 
-**Modelo:** código proprietário; licença pessoal gratuita e licença comercial paga por acordo específico.
+**Licença do código e documentação original:** MIT
 
-**Titular/licenciante indicado:** Nuno Domingues  
-**Contacto de licenciamento:** formadesignsystem@gmail.com
+**Copyright indicado:** Copyright (c) 2026 Nuno Domingues
 
-| Caso | Personal | Commercial |
-|---|---|---|
-| Aprender e testar | Sim | Sim |
-| App sem monetização e sem interesse comercial, criada por pessoa individual | Sim | Sim |
-| App com anúncios, subscrição, venda, patrocínio, cliente ou uso de empresa | Não | Sim, com acordo |
-| Publicar app compilada incluindo FormaDS | Sim, se não comercial | Sim, no âmbito do contrato |
-| Personalizar textos/temas pelas APIs públicas | Sim | Sim |
-| Alterar o source do SDK e distribuir forks | Não, salvo lei imperativa/autorização | Não, salvo lei imperativa/autorização |
-| Revender SDK isolado ou redistribuir como package | Não | Não, salvo acordo expresso |
+**Contacto:** formadesignsystem@gmail.com
 
-O que se autoriza: distribuição da aplicação final compilada. O que se proíbe: distribuição do SDK como biblioteca reutilizável ou cópia dos seus materiais originais protegidos. Não se reivindica monopólio sobre ideias, algoritmos, padrões de UI ou implementações independentes.
+## Direitos concedidos
 
-A modalidade Personal não cobre atividades com benefício económico indireto (p.ex., apps com anúncios ou uso por empresa). Definir exceções para open-source sem monetização, donativos, associações ou projetos educativos apenas por escrito.
+A licença MIT permite, sem distinção entre utilização pessoal e comercial:
 
-Os contratos comerciais deverão indicar titular, cliente, número de aplicações/developers, preços, suporte, versões, termo e tratamento de aplicações já publicadas após término.
+- usar e copiar o FormaDS;
+- modificar e criar forks;
+- integrar o package em aplicações;
+- distribuir aplicações compiladas;
+- publicar e redistribuir código-fonte ou binários;
+- sublicenciar e vender cópias.
 
-**Importante:** esta licença personalizada não é uma licença Open Source Initiative. Descrever o SDK como *proprietary* / *source-available under restrictions* se o código for visível, não como «open source».
+A condição da licença é preservar o aviso de copyright e o texto da licença MIT em todas as cópias ou partes substanciais do software.
 
-**Revisão legal antes de uso externo:** especialmente validade dos mecanismos de aceitação, disposições de cessação, responsabilidade, normas imperativas em Portugal/UE, licenças de fontes e titularidade do código.
+Não existe licença comercial separada, processo obrigatório de aceitação, restrição de uso não comercial, proibição de forks ou foro contratual específico ao abrigo da MIT.
+
+## Materiais de terceiros
+
+A MIT não relicencia materiais de terceiros. Sora e Manrope continuam sob SIL Open Font License 1.1; os respetivos avisos em `LICENSES/` e `THIRD_PARTY_NOTICES.md` devem acompanhar a distribuição quando aplicável. Os termos Apple continuam a aplicar-se a frameworks e SF Symbols.
+
+## Titularidade
+
+Antes de publicação, Nuno Domingues deve conservar confirmação factual de que pode licenciar os materiais originais FormaDS e de que estes não incorporam propriedade de empregadores, clientes ou terceiros sem autorização. Esta confirmação é distinta da licença MIT e não deve ser apresentada como aprovação jurídica externa.

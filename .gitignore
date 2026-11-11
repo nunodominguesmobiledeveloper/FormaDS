@@ -14,6 +14,7 @@ build/
 *.ipa
 *.dSYM
 *.dSYM.zip
+*.xcarchive
 
 # Swift Package Manager
 .build/
@@ -33,5 +34,8 @@ build/
 .env.*
 !.env.example
 *.p12
+*.cer
+*.key
+*.pem
 *.mobileprovision
 .netrc

@@ -1,6 +1,6 @@
 # FormaDS — Third-Party Notices
 
-The FormaDS proprietary license does not relicense the third-party materials listed below. Their original terms prevail.
+The MIT License for the original FormaDS software does not relicense the third-party materials listed below. Their original terms prevail.
 
 ## Sora
 

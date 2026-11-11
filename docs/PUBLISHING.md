@@ -4,22 +4,24 @@
 
 - Titular/licenciante indicado: **Nuno Domingues**.
 - Contacto: **formadesignsystem@gmail.com**.
-- A licença proprietária continua em minuta: faltam data efetiva, lei/foro aplicável, processo de aceitação e revisão jurídica.
-- A auditoria não confirmou a distribuição exata dos sete TTF incluídos. Resolver o bloqueio documentado em `ASSET_LICENSE_AUDIT.md` antes de qualquer distribuição externa.
+- O código e a documentação original FormaDS usam a licença MIT, com `Copyright (c) 2026 Nuno Domingues`.
+- A MIT permite utilização pessoal e comercial, modificação, forks, redistribuição, sublicenciamento e venda, desde que os avisos exigidos sejam preservados.
+- Continua pendente a confirmação factual de que todos os materiais originais podem ser licenciados por Nuno Domingues e não estão sujeitos a direitos de empregadores ou clientes.
+- A proveniência e as licenças OFL-1.1 dos sete TTF estão documentadas em `ASSET_LICENSE_AUDIT.md`.
 - Não criar tag, release pública ou pacote comercial enquanto estes bloqueios permanecerem.
 
 ## Recomendação
 - Repositório **privado** com o código-fonte, testes, assets e Showcase.
-- Preparar pacote de distribuição separado. Avaliar **Swift Package com XCFramework** para distribuir binário e reduzir exposição do source original.
+- A distribuição pode usar o Swift Package de source atual ou um pacote binário. Avaliar **Swift Package com XCFramework** apenas por razões técnicas, de tamanho ou proteção operacional; a MIT permite acesso, modificação e redistribuição do código licenciado.
 - O package de distribuição deve conter apenas os materiais necessários, avisos, termos e referência ao artefacto binário (nunca chaves privadas, source interno ou ficheiros de desenvolvimento).
-- Um repositório público com a licença proprietária não impede tecnicamente cópia/fork; restringe direitos conforme lei e termos. Para maior controlo, distribuir acesso privado/autenticado e considerar binários.
+- Um repositório público é compatível com MIT. Não apresentar acesso privado ou binários como forma de proibir direitos que a licença MIT concede aos destinatários.
 
 ## Fases de release
-1. Obter declaração de titularidade do código original e revisão jurídica do `LICENSE`.
+1. Obter confirmação factual de que o código original pode ser disponibilizado por Nuno Domingues sob MIT.
 2. Auditar fontes, assets e dependências; incluir avisos de terceiros.
 3. Verificar package, variantes iOS e iOS Simulator, recursos `.xcstrings`, fontes e API pública.
 4. Validar com uma aplicação consumidora independente (não o Showcase).
-5. Testar Personal/Commercial onboarding e como se comprova aceitação da licença; usar `formadesignsystem@gmail.com` como contacto de licenciamento.
+5. Confirmar que o pacote distribuído inclui o `LICENSE`, `THIRD_PARTY_NOTICES.md` e os avisos OFL aplicáveis.
 6. Criar release candidate e executar build/testes; gerar changelog.
 7. Para fonte privada: criar tag semântica, autenticação por consumidor e política de acesso.
 8. Para binário: gerar XCFramework, ZIP com artefacto na raiz, hospedar, calcular checksum SHA256 com `swift package compute-checksum`, declarar `.binaryTarget(name:url:checksum:)`, testar instalação limpa e acesso ao artefacto.
@@ -54,8 +56,8 @@ let package = Package(
 - `1.0.1`: correções compatíveis.
 - `1.1.0`: funcionalidades compatíveis.
 - `2.0.0`: alterações incompatíveis.
-- Definir preços/licenças para novas versões ou novos clientes; não assumir que alterar termos futuros extingue direitos validamente concedidos em versões anteriores.
-- Definir o que acontece às aplicações compiladas e distribuídas quando uma licença paga expira, para evitar conflitos com clientes.
+- A MIT não exige preços, renovação, aceitação individual ou licença comercial separada.
+- Versões já recebidas sob MIT conservam os direitos concedidos por essa licença; uma alteração futura de estratégia não retira retroativamente esses direitos.
 
 ## Fontes técnicas
 - https://developer.apple.com/documentation/xcode/distributing-binary-frameworks-as-swift-packages

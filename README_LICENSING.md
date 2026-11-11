@@ -1,26 +1,25 @@
 # FormaDS — Licensing
 
-FormaDS is proprietary software. **It is not open source.**
+FormaDS is open-source software distributed under the [MIT License](LICENSE).
 
-## Personal use — free
-Individual developers may use an authorized unmodified copy of FormaDS in noncommercial projects and distribute their resulting apps in compiled form, subject to the [FormaDS Proprietary SDK License](LICENSE). Revenue, ads, subscriptions, client work and business use are not included.
+## What the MIT License permits
 
-## Commercial use — separate paid license required
-Companies, freelancers working for clients, commercial apps and other business uses require a written commercial agreement. Contact: **formadesignsystem@gmail.com**.
+The MIT License permits personal and commercial use, copying, modification, merging, publication, distribution, sublicensing and sale of copies of FormaDS. The copyright notice and MIT permission notice must be included in all copies or substantial portions of the software.
 
-## Not permitted
-- Publishing, selling or sublicensing FormaDS as a standalone SDK/package or as a fork.
-- Redistributing modified copies of the proprietary FormaDS implementation without express written authorization.
-- Copying protected FormaDS code/assets to build a replacement SDK.
-
-## Permitted
-- Configuring the original components using their documented public APIs.
-- Distributing a compiled application that uses FormaDS within the scope of an authorized license.
+There is no separate Personal or Commercial edition, no fee required by the MIT License, and no requirement to register acceptance with the copyright holder.
 
 ## Third-party resources
-Fonts and third-party assets remain under their own terms, including SIL Open Font License 1.1 for Sora and Manrope. See [Third-Party Notices](THIRD_PARTY_NOTICES.md) and `LICENSES/`.
 
-## Important
-The copyright holder and licensing contact are identified as **Nuno Domingues** and **formadesignsystem@gmail.com**. The proprietary license remains a draft pending an effective date, governing-law decision and qualified legal review. Do not present it as final or externally effective while those items remain unresolved.
+The MIT License applies to the original FormaDS code and documentation. It does not replace the separate licenses that apply to third-party materials.
 
-The OFL files in `LICENSES/` are byte-for-byte copies of the notices supplied by the pinned official upstream distributions used for the bundled font binaries. Commit identifiers, source paths and SHA-256 hashes are recorded in [the asset audit](docs/ASSET_LICENSE_AUDIT.md).
+Sora and Manrope remain licensed under the SIL Open Font License 1.1. Their notices must be preserved as required by the OFL. See [Third-Party Notices](THIRD_PARTY_NOTICES.md), `LICENSES/` and the [asset audit](docs/ASSET_LICENSE_AUDIT.md).
+
+Apple frameworks and SF Symbols remain subject to Apple's applicable terms.
+
+## Copyright contact
+
+Copyright (c) 2026 Nuno Domingues
+
+Contact: **formadesignsystem@gmail.com**
+
+Before publication, the copyright holder should retain evidence that the original FormaDS materials can lawfully be released under MIT and do not incorporate employer, client or third-party proprietary material.
