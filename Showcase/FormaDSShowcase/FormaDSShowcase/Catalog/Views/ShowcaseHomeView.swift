@@ -51,6 +51,7 @@ struct ShowcaseHomeView: View {
             NavigationFeedbackGalleryView()
                 .dsTheme(selectedTheme.theme)
                 .preferredColorScheme(selectedColorScheme)
+                .environment(\.locale, selectedLanguage.locale)
         }
     }
 

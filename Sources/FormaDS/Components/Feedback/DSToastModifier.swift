@@ -39,6 +39,12 @@ struct DSToastModifier: ViewModifier {
     @Environment(\.locale)
     private var locale
 
+    @Environment(\.dsTheme)
+    private var theme
+
+    @Environment(\.colorScheme)
+    private var colorScheme
+
     // MARK: - Binding
 
     @Binding private var toast: DSToastData?
@@ -91,6 +97,9 @@ struct DSToastModifier: ViewModifier {
                             }
                             : nil
                     )
+                    .dsTheme(theme)
+                    .environment(\.colorScheme, colorScheme)
+                    .environment(\.locale, locale)
                     .dsScreenPadding()
                     .padding(.top, DS.Spacing.xSmall)
                     .transition(toastTransition)

@@ -164,6 +164,12 @@ struct IndicatorsGalleryView: View {
 
                 Text("tasks left")
                     .font(DS.Typography.caption)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .fixedSize(
+                        horizontal: false,
+                        vertical: true
+                    )
             }
             .foregroundStyle(DS.Colors.textPrimary)
             .accessibilityLabel(
@@ -238,7 +244,7 @@ struct IndicatorsGalleryView: View {
                         accessibilityTitle: "Budget used"
                     )
 
-                    Text("56% utilizado")
+                    Text("56% used")
                         .font(DS.Typography.caption)
                         .foregroundStyle(DS.Colors.textSecondary)
                 }
@@ -259,7 +265,7 @@ struct IndicatorsGalleryView: View {
                 HStack(
                     spacing: DS.Layout.itemSpacing
                 ) {
-                    DSBadge("Em atraso", color: .stateError)
+                    DSBadge("Overdue", color: .stateError)
 
                     DSBadge(
                         "Completed",
